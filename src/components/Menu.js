@@ -4,6 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import logo from "../Images/juego.jpg";
+import styles from "../styles/menu.module.css";
 
 function Menu() {
   return (
@@ -30,7 +31,9 @@ function Menu() {
                 Abandonados
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="/admin">Admin</Nav.Link>
+            <div className={styles.adminbut}>
+              <Nav.Link href="/admin">Admin</Nav.Link>
+            </div>
           </Nav>
         </Navbar.Collapse>
       </Container>
