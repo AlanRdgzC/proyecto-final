@@ -21,7 +21,6 @@ function Menu() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/juegos">Juegos</Nav.Link>
             <NavDropdown title="Mi lista" id="basic-nav-dropdown">
               <NavDropdown.Item href="/pendientes">Pendientes</NavDropdown.Item>
               <NavDropdown.Item href="/jugando">Jugando</NavDropdown.Item>
