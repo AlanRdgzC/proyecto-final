@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import logo from "../Images/juego.jpg";
+
 import styles from "../styles/menu.module.css";
 
 function Menu() {
@@ -16,7 +16,7 @@ function Menu() {
     >
       <Container>
         <Navbar.Brand href="/">
-          <img src={logo} />
+          <img src="Images/control.png" width="50" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
