@@ -1,6 +1,7 @@
 import React from "react";
 import Juego from "../components/Juego";
 import ListGroup from "react-bootstrap/ListGroup";
+//import styles from "../styles/index.modules.css";
 
 export default function Home() {
   return (
