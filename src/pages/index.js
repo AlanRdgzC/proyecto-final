@@ -1,11 +1,13 @@
 import React from "react";
 import Juego from "../components/Juego";
 import ListGroup from "react-bootstrap/ListGroup";
-//import styles from "../styles/index.modules.css";
+//import "./src/styles/index.module.css";
+import styles from "../styles/index.module.css";
 
 export default function Home() {
   return (
-    <div>
+    //<div style={{ backgroundColor: "lightslategray" }}>
+    <div className={styles.body}>
       <h1>home</h1>
 
       <Juego></Juego>
