@@ -36,7 +36,7 @@ function Juego() {
             <ListGroup.Item variant="dark">Un jugador</ListGroup.Item>
           </ListGroup>
 
-          <Button variant="primary">
+          <Button variant="success">
             <NavDropdown title="Añadir a" id="basic-nav-dropdown">
               <NavDropdown.Item href="/pendientes">Pendientes</NavDropdown.Item>
               <NavDropdown.Item href="/jugando">Jugando</NavDropdown.Item>
