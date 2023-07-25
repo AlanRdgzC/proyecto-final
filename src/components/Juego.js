@@ -6,7 +6,7 @@ import ListGroup from "react-bootstrap/ListGroup";
 
 function Juego() {
   return (
-    <Card style={{ width: "18rem" }}>
+    <Card style={{ width: "18rem", textAlign: "center" }}>
       <Card.Img variant="top" src="Images/HK.jpg" />
       <Card.Body>
         <Card.Title>Hollow Knight</Card.Title>
