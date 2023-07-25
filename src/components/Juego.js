@@ -8,7 +8,14 @@ function Juego() {
   return (
     <>
       {["Dark"].map((variant) => (
-        <Card style={{ width: "18rem", textAlign: "center" }}>
+        <Card
+          style={{ width: "18rem", textAlign: "center" }}
+          bg={variant.toLowerCase()}
+          key={variant}
+          text={variant.toLowerCase() === "light" ? "dark" : "white"}
+          Card
+          border="success"
+        >
           <Card.Img variant="top" src="Images/HK.jpg" />
           <Card.Body>
             <Card.Title>Hollow Knight</Card.Title>
@@ -19,14 +26,17 @@ function Juego() {
             </Card.Text>
           </Card.Body>
           <ListGroup variant="flush">
-            <ListGroup.Item>
+            <ListGroup.Item variant="dark">
               FECHA DE LANZAMIENTO:<br></br> 24 FEB 2017
             </ListGroup.Item>
-            <ListGroup.Item>
+
+            <ListGroup.Item variant="dark">
               DESARROLLADOR:<br></br> Team Cherry
             </ListGroup.Item>
-            <ListGroup.Item>Un jugador</ListGroup.Item>
+
+            <ListGroup.Item variant="dark">Un jugador</ListGroup.Item>
           </ListGroup>
+
           <Button variant="primary">
             <NavDropdown title="Añadir a" id="basic-nav-dropdown">
               <NavDropdown.Item href="/pendientes">Pendientes</NavDropdown.Item>
