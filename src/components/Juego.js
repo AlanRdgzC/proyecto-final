@@ -1,16 +1,17 @@
 import React from "react";
-import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import ListGroup from "react-bootstrap/ListGroup";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+import Dropdown from "react-bootstrap/Dropdown";
+import DropdownButton from "react-bootstrap/DropdownButton";
 
-function Juego() {
+function Juego(props) {
   return (
     <>
-      <Row xs={1} md={2} className="g-4">
-        {Array.from({ length: 4 }).map((_, idx) => (
+      <Row xs={1} md={4} className="gx-3 gy-4">
+        {Array.from({ length: 12 }).map((_, idx) => (
           <Col key={idx}>
             {["Dark"].map((variant) => (
               <Card
@@ -20,7 +21,7 @@ function Juego() {
                 text={variant.toLowerCase() === "light" ? "dark" : "white"}
                 border="success"
               >
-                <Card.Img variant="top" src="Images/HK.jpg" />
+                <Card.Img variant="top" src={props.image} />
                 <Card.Body>
                   <Card.Title>Hollow Knight</Card.Title>
                   <Card.Text>
@@ -41,21 +42,15 @@ function Juego() {
                   <ListGroup.Item variant="dark">Un jugador</ListGroup.Item>
                 </ListGroup>
 
-                <Button variant="success">
-                  <NavDropdown title="Añadir a" id="basic-nav-dropdown">
-                    <NavDropdown.Item href="/pendientes">
-                      Pendientes
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href="/jugando">Jugando</NavDropdown.Item>
-                    <NavDropdown.Item href="/terminados">
-                      Terminados
-                    </NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="/abandonados">
-                      Abandonados
-                    </NavDropdown.Item>
-                  </NavDropdown>
-                </Button>
+                <DropdownButton
+                  id="boton-principal"
+                  title="Enviar a"
+                  variant="success"
+                >
+                  <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                  <Dropdown.Item href="#/action-2">Pendientes</Dropdown.Item>
+                  <Dropdown.Item href="#/action-3">Terminados</Dropdown.Item>
+                </DropdownButton>
               </Card>
             ))}
           </Col>
