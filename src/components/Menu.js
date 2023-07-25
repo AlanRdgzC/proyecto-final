@@ -3,7 +3,6 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import styles from "../styles/menu.module.css";
 
 function Menu() {
   return (
@@ -30,7 +29,7 @@ function Menu() {
                 Abandonados
               </NavDropdown.Item>
             </NavDropdown>
-            <div className={styles.adminbut}>
+            <div class="position-absolute end-0">
               <Nav.Link href="/admin">Admin</Nav.Link>
             </div>
           </Nav>
