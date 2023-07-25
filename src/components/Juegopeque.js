@@ -9,7 +9,11 @@ function Juegopeque(props) {
       <Card.Img variant="top" src={props.image} />
       <Card.Body>
         <Card.Title>{props.gametitle}</Card.Title>
-        <DropdownButton id="dropdown-basic-button" title="Estado">
+        <DropdownButton
+          id="dropdown-basic-button "
+          variant={props.color}
+          title="Estado"
+        >
           <Dropdown.Item href="/jugando">Jugando</Dropdown.Item>
           <Dropdown.Item href="/pendientes">Pendiente</Dropdown.Item>
           <Dropdown.Item href="/terminados">Terminado</Dropdown.Item>

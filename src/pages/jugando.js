@@ -5,7 +5,11 @@ function jugando() {
   return (
     <div>
       <h1>jugando</h1>
-      <Juegopeque gametitle="Hollow Knight" image="Images/HK.jpg" />
+      <Juegopeque
+        gametitle="Hollow Knight"
+        color="success"
+        image="Images/HK.jpg"
+      />
     </div>
   );
 }
