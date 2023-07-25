@@ -10,7 +10,7 @@ function Juego() {
       {["Dark"].map((variant) => (
         <Card
           style={{ width: "18rem", textAlign: "center" }}
-          bg="dark" //{variant.toLowerCase()}
+          bg={variant.toLowerCase()} //"dark"
           key={variant}
           text={variant.toLowerCase() === "light" ? "dark" : "white"}
           border="success"
