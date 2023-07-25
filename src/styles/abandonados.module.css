@@ -1,0 +1,10 @@
+#Titulo{
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+}
+#Cementerio{
+   background-image: linear-gradient(rgba(0, 0, 255, 0.425), rgba(41, 41, 1, 0.5)),url("../../public/Images/Cementerio.png");
+   width: 100%;
+   height: 800px;
+}
