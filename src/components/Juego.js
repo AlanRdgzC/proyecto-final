@@ -1,19 +1,38 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import ListGroup from "react-bootstrap/ListGroup";
 
 function Juego() {
   return (
     <Card style={{ width: "18rem" }}>
       <Card.Img variant="top" src="Images/HK.jpg" />
       <Card.Body>
-        <Card.Title>Card Title</Card.Title>
+        <Card.Title>Hollow Knight</Card.Title>
         <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+          ¡Forja tu propio camino en Hollow Knight! Una aventura épica a través
+          de un vasto reino de insectos y héroes que se encuentra en ruinas.
         </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
       </Card.Body>
+      <ListGroup variant="flush">
+        <ListGroup.Item>
+          FECHA DE LANZAMIENTO:<br></br> 24 FEB 2017
+        </ListGroup.Item>
+        <ListGroup.Item>
+          DESARROLLADOR:<br></br> Team Cherry
+        </ListGroup.Item>
+        <ListGroup.Item>Un jugador</ListGroup.Item>
+      </ListGroup>
+      <Button variant="primary">
+        <NavDropdown title="Añadir a" id="basic-nav-dropdown">
+          <NavDropdown.Item href="/pendientes">Pendientes</NavDropdown.Item>
+          <NavDropdown.Item href="/jugando">Jugando</NavDropdown.Item>
+          <NavDropdown.Item href="/terminados">Terminados</NavDropdown.Item>
+          <NavDropdown.Divider />
+          <NavDropdown.Item href="/abandonados">Abandonados</NavDropdown.Item>
+        </NavDropdown>
+      </Button>
     </Card>
   );
 }
