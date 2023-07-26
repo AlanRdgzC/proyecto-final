@@ -10,8 +10,8 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 function Juego(props) {
   return (
     <>
-      <Row xs={1} md={4} className="gx-3 gy-4">
-        {Array.from({ length: 12 }).map((_, idx) => (
+      <Row xs={1} md={1} className="gx-3 gy-4">
+        {Array.from({ length: 1 }).map((_, idx) => (
           <Col key={idx}>
             {["Dark"].map((variant) => (
               <Card
