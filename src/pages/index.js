@@ -10,7 +10,16 @@ export default function Home() {
     <div className={styles.body}>
       <h1>home</h1>
 
-      <Juego></Juego>
+      <Juego
+        image="Images/HK.jpg"
+        gametitle="Hollow Knight"
+        gamedescription="¡Forja tu propio camino en Hollow Knight! Una aventura épica
+      a través de un vasto reino de insectos y héroes que se
+      encuentra en ruinas."
+        gamelaunch="24 FEB 2017"
+        gamedeveloper="Team Cherry"
+        gamemode="Un jugador"
+      />
 
       <ListGroup>
         <ListGroup.Item>No style</ListGroup.Item>
