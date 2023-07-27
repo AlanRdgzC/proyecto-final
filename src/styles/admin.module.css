@@ -1,0 +1,8 @@
+#Titulo {
+  display: flex;
+  justify-content: center;
+  color: black;
+}
+#Fondo {
+  background-color: gray;
+}

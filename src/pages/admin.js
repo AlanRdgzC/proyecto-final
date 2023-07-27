@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import styles from "../styles/admin.module.css";
 
 function admin() {
   const [gametitle, setGametitle] = useState("");
@@ -55,67 +59,81 @@ function admin() {
   }
 
   return (
-    <Form>
-      <Form.Group className="mb-3" controlId="formGridAddress2">
-        <Form.Label>Game Name</Form.Label>
-        <Form.Control
-          placeholder="Nombre del juego"
-          value={gametitle}
-          onChange={nameChange}
-        />
-      </Form.Group>
+    <div id={styles.Fondo}>
+      <header id={styles.Titulo}>
+        <h1>Games Administration</h1>
+      </header>
+      <Container>
+        <Row>
+          <Col>
+            <Form>
+              <Form.Group className="mb-3" controlId="formGridAddress2">
+                <Form.Label>Game Name</Form.Label>
+                <Form.Control
+                  placeholder="Nombre del juego"
+                  value={gametitle}
+                  onChange={nameChange}
+                />
+              </Form.Group>
 
-      <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-        <Form.Label>Description</Form.Label>
-        <Form.Control
-          as="textarea"
-          rows={3}
-          placeholder="Descripcion del juego"
-          value={gamedescription}
-          onChange={descriptionChange}
-        />
-      </Form.Group>
+              <Form.Group
+                className="mb-3"
+                controlId="exampleForm.ControlTextarea1"
+              >
+                <Form.Label>Description</Form.Label>
+                <Form.Control
+                  as="textarea"
+                  rows={3}
+                  placeholder="Descripcion del juego"
+                  value={gamedescription}
+                  onChange={descriptionChange}
+                />
+              </Form.Group>
 
-      <Form.Group className="mb-3" controlId="formGridAddress2">
-        <Form.Label>Release Date</Form.Label>
-        <Form.Control
-          placeholder="Fecha de lanzamiento"
-          value={gamelaunch}
-          onChange={launchChange}
-        />
-      </Form.Group>
+              <Form.Group className="mb-3" controlId="formGridAddress2">
+                <Form.Label>Release Date</Form.Label>
+                <Form.Control
+                  placeholder="Fecha de lanzamiento"
+                  value={gamelaunch}
+                  onChange={launchChange}
+                />
+              </Form.Group>
 
-      <Form.Group className="mb-3" controlId="formGridAddress2">
-        <Form.Label>GameDev</Form.Label>
-        <Form.Control
-          placeholder="Desarrolladora del juego"
-          value={gamedeveloper}
-          onChange={devChange}
-        />
-      </Form.Group>
+              <Form.Group className="mb-3" controlId="formGridAddress2">
+                <Form.Label>GameDev</Form.Label>
+                <Form.Control
+                  placeholder="Desarrolladora del juego"
+                  value={gamedeveloper}
+                  onChange={devChange}
+                />
+              </Form.Group>
 
-      <Form.Group className="mb-3" controlId="formGridAddress2">
-        <Form.Label>Players</Form.Label>
-        <Form.Control
-          placeholder="Cantidad de jugadores"
-          value={gamemode}
-          onChange={modeChange}
-        />
-      </Form.Group>
+              <Form.Group className="mb-3" controlId="formGridAddress2">
+                <Form.Label>Players</Form.Label>
+                <Form.Control
+                  placeholder="Cantidad de jugadores"
+                  value={gamemode}
+                  onChange={modeChange}
+                />
+              </Form.Group>
 
-      <Form.Group className="mb-3" controlId="formGridAddress2">
-        <Form.Label>ImageURL</Form.Label>
-        <Form.Control
-          placeholder="Link de la imagen del juego"
-          value={image}
-          onChange={imageChange}
-        />
-      </Form.Group>
+              <Form.Group className="mb-3" controlId="formGridAddress2">
+                <Form.Label>ImageURL</Form.Label>
+                <Form.Control
+                  placeholder="Link de la imagen del juego"
+                  value={image}
+                  onChange={imageChange}
+                />
+              </Form.Group>
 
-      <Button variant="primary" type="submit" onClick={addGame}>
-        Submit
-      </Button>
-    </Form>
+              <Button variant="primary" type="submit" onClick={addGame}>
+                Submit
+              </Button>
+            </Form>
+          </Col>
+        </Row>
+      </Container>
+    </div>
   );
 }
 
