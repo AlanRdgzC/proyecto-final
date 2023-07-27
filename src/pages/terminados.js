@@ -47,6 +47,23 @@ function terminados() {
             <Juegopeque gametitle="ej" color="info" image="Images/HK.jpg" />
           </Col>
         </Row>
+        <Row>
+          <Col>
+            <Juegopeque gametitle="eje" color="info" image="Images/HK.jpg" />
+          </Col>
+          <Col>
+            <Juegopeque gametitle="ej" color="info" image="Images/HK.jpg" />
+          </Col>
+          <Col>
+            <Juegopeque gametitle="ej" color="info" image="Images/HK.jpg" />
+          </Col>
+          <Col>
+            <Juegopeque gametitle="ej" color="info" image="Images/HK.jpg" />
+          </Col>
+          <Col>
+            <Juegopeque gametitle="ej" color="info" image="Images/HK.jpg" />
+          </Col>
+        </Row>
       </Container>
     </div>
   );

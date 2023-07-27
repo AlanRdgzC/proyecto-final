@@ -1,15 +1,70 @@
 import React from "react";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import Juegopeque from "@/components/Juegopeque";
 
 function jugando() {
   return (
     <div>
       <h1>jugando</h1>
-      <Juegopeque
-        gametitle="Hollow Knight"
-        color="success"
-        image="Images/HK.jpg"
-      />
+      <Container>
+        <Row>
+          <Col>
+            <Juegopeque
+              gametitle="Hollow Knight"
+              color="info"
+              image="Images/HK.jpg"
+            />
+          </Col>
+          <Col>
+            <Juegopeque gametitle="ej" color="info" image="Images/HK.jpg" />
+          </Col>
+          <Col>
+            <Juegopeque gametitle="ej" color="info" image="Images/HK.jpg" />
+          </Col>
+          <Col>
+            <Juegopeque gametitle="ej" color="info" image="Images/HK.jpg" />
+          </Col>
+          <Col>
+            <Juegopeque gametitle="ej" color="info" image="Images/HK.jpg" />
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <Juegopeque gametitle="eje" color="info" image="Images/HK.jpg" />
+          </Col>
+          <Col>
+            <Juegopeque gametitle="ej" color="info" image="Images/HK.jpg" />
+          </Col>
+          <Col>
+            <Juegopeque gametitle="ej" color="info" image="Images/HK.jpg" />
+          </Col>
+          <Col>
+            <Juegopeque gametitle="ej" color="info" image="Images/HK.jpg" />
+          </Col>
+          <Col>
+            <Juegopeque gametitle="ej" color="info" image="Images/HK.jpg" />
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <Juegopeque gametitle="eje" color="info" image="Images/HK.jpg" />
+          </Col>
+          <Col>
+            <Juegopeque gametitle="ej" color="info" image="Images/HK.jpg" />
+          </Col>
+          <Col>
+            <Juegopeque gametitle="ej" color="info" image="Images/HK.jpg" />
+          </Col>
+          <Col>
+            <Juegopeque gametitle="ej" color="info" image="Images/HK.jpg" />
+          </Col>
+          <Col>
+            <Juegopeque gametitle="ej" color="info" image="Images/HK.jpg" />
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }

@@ -34,6 +34,11 @@ function admin() {
         <Form.Control placeholder="Cantidad de jugadores" />
       </Form.Group>
 
+      <Form.Group className="mb-3" controlId="formGridAddress2">
+        <Form.Label>ImageURL</Form.Label>
+        <Form.Control placeholder="Link de la imagen del juego" />
+      </Form.Group>
+
       <Button variant="primary" type="submit">
         Submit
       </Button>
