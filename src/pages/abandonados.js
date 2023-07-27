@@ -1,6 +1,9 @@
 import React from "react";
 import styles from "../styles/abandonados.module.css";
-import Form from "react-bootstrap/Form";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Juegopeque from "@/components/Juegopeque";
 
 function abandonados() {
   return (
@@ -8,24 +11,65 @@ function abandonados() {
       <header id={styles.Titulo}>
         <h1>abandonados</h1>
       </header>
-
-      <div class="card" style={{ width: "18rem" }}>
-        <img src="..." class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">Minecraft</h5>
-          <p class="card-text">
-            Minecraft es un juego de mundo abierto, y no tiene un fin claramente definido. Esto permite una gran libertad en cuanto a la elección de su forma de jugar. A pesar de ello, el juego posee un sistema que otorga logros por completar ciertas acciones.
-          </p>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">FECHA DE LANZAMIENTO: <br /> 17 de mayo del 2009</li>
-          <li class="list-group-item">A second item</li>
-          <li class="list-group-item">A third item</li>
-        </ul>
-      </div>
+      <Container>
+        <Row>
+          <Col>
+            <Juegopeque
+              gametitle="Hollow Knight"
+              color="danger"
+              image="Images/HK.jpg"
+            />
+          </Col>
+          <Col>
+            <Juegopeque gametitle="ej" color="danger" image="Images/HK.jpg" />
+          </Col>
+          <Col>
+            <Juegopeque gametitle="ej" color="danger" image="Images/HK.jpg" />
+          </Col>
+          <Col>
+            <Juegopeque gametitle="ej" color="danger" image="Images/HK.jpg" />
+          </Col>
+          <Col>
+            <Juegopeque gametitle="ej" color="danger" image="Images/HK.jpg" />
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <Juegopeque gametitle="eje" color="danger" image="Images/HK.jpg" />
+          </Col>
+          <Col>
+            <Juegopeque gametitle="ej" color="danger" image="Images/HK.jpg" />
+          </Col>
+          <Col>
+            <Juegopeque gametitle="ej" color="danger" image="Images/HK.jpg" />
+          </Col>
+          <Col>
+            <Juegopeque gametitle="ej" color="danger" image="Images/HK.jpg" />
+          </Col>
+          <Col>
+            <Juegopeque gametitle="ej" color="danger" image="Images/HK.jpg" />
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <Juegopeque gametitle="eje" color="danger" image="Images/HK.jpg" />
+          </Col>
+          <Col>
+            <Juegopeque gametitle="ej" color="danger" image="Images/HK.jpg" />
+          </Col>
+          <Col>
+            <Juegopeque gametitle="ej" color="danger" image="Images/HK.jpg" />
+          </Col>
+          <Col>
+            <Juegopeque gametitle="ej" color="danger" image="Images/HK.jpg" />
+          </Col>
+          <Col>
+            <Juegopeque gametitle="ej" color="danger" image="Images/HK.jpg" />
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }
 
 export default abandonados;
-

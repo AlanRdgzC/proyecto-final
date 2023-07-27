@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "../styles/terminados.module.css";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -6,8 +7,10 @@ import Juegopeque from "@/components/Juegopeque";
 
 function terminados() {
   return (
-    <div>
-      <h1>terminados</h1>
+    <div id={styles.Fondo}>
+      <header id={styles.Titulo}>
+        <h1>Terminados</h1>
+      </header>
       <Container>
         <Row>
           <Col>

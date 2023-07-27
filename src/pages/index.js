@@ -21,7 +21,7 @@ export default function Home() {
     //<div style={{ backgroundColor: "lightslategray" }}>
     <div className={styles.body}>
       <header id={styles.Titulo}>
-        <h1>home</h1>
+        <h1>Gaming Database</h1>
       </header>
       {data.map((info) => {
         return (
@@ -32,6 +32,7 @@ export default function Home() {
             gamelaunch={info.gamelaunch}
             gamedeveloper={info.gamedeveloper}
             gamemode={info.gamemode}
+            state={info.state}
           />
         );
       })}

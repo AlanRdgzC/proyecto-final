@@ -31,9 +31,18 @@ function Juego(props) {
       </ListGroup>
 
       <DropdownButton id="boton-principal" title="Enviar a" variant="success">
-        <Dropdown.Item href="#/action-1">Pendientes</Dropdown.Item>
-        <Dropdown.Item href="#/action-2">Jugando</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">Terminados</Dropdown.Item>
+        <Dropdown.Item href="/jugando" onClick={props.state}>
+          Jugando
+        </Dropdown.Item>
+        <Dropdown.Item href="/pendientes" onClick={props.state}>
+          Pendiente
+        </Dropdown.Item>
+        <Dropdown.Item href="/terminados" onClick={props.state}>
+          Terminado
+        </Dropdown.Item>
+        <Dropdown.Item href="/abandonados" onClick={props.state}>
+          Abandonado
+        </Dropdown.Item>
       </DropdownButton>
     </Card>
   );
