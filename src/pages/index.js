@@ -1,14 +1,40 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import Juego from "../components/Juego";
-import ListGroup from "react-bootstrap/ListGroup";
-//import "./src/styles/index.module.css";
 import styles from "../styles/index.module.css";
 
 export default function Home() {
+  const [data, setData] = useState([]);
+
+  // function getAllGames() {
+  //   axios.get("http://localhost:5000").then((response) => {
+  //     console.log(response);
+  //     setData(response.data);
+  //   });
+  // }
+
+  // useEffect(() => {
+  //   getAllGames();
+  // }, []);
+
   return (
     //<div style={{ backgroundColor: "lightslategray" }}>
     <div className={styles.body}>
-      <h1>home</h1>
+      <header id={styles.Titulo}>
+        <h1>home</h1>
+      </header>
+      {data.map((info) => {
+        return (
+          <Juego
+            image={info.image}
+            gametitle={info.gametitle}
+            gamedescription={info.gamedescription}
+            gamelaunch={info.gamelaunch}
+            gamedeveloper={info.gamedeveloper}
+            gamemode={info.gamemode}
+          />
+        );
+      })}
 
       <Juego
         image="Images/HK.jpg"
@@ -20,18 +46,6 @@ export default function Home() {
         gamedeveloper="Team Cherry"
         gamemode="Un jugador"
       />
-
-      <ListGroup>
-        <ListGroup.Item>No style</ListGroup.Item>
-        <ListGroup.Item variant="primary">Primary</ListGroup.Item>
-        <ListGroup.Item variant="secondary">Secondary</ListGroup.Item>
-        <ListGroup.Item variant="success">Success</ListGroup.Item>
-        <ListGroup.Item variant="danger">Danger</ListGroup.Item>
-        <ListGroup.Item variant="warning">Warning</ListGroup.Item>
-        <ListGroup.Item variant="info">Info</ListGroup.Item>
-        <ListGroup.Item variant="light">Light</ListGroup.Item>
-        <ListGroup.Item variant="dark">Dark</ListGroup.Item>
-      </ListGroup>
     </div>
   );
 }
