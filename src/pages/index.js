@@ -21,37 +21,39 @@ export default function Home() {
 
   return (
     //<div style={{ backgroundColor: "lightslategray" }}>
-    <div className={styles.body}>
+    <div>
       <header id={styles.Titulo}>
         <h1>Gaming Database</h1>
       </header>
+      <div className={styles.body}>
+        {data.map((info) => {
+          return (
+            <div className={styles.Gdcard}>
+              <Juego
+                classname={styles.cards}
+                image={info.image}
+                gameTitle={info.gameTitle}
+                gameDescription={info.gameDescription}
+                gameLaunch={info.gameLaunch}
+                gameDeveloper={info.gameDeveloper}
+                gameMode={info.gameMode}
+                state={info.state}
+              />
+            </div>
+          );
+        })}
 
-      {data.map((info) => {
-        return (
-          <div className={styles.Gdcard}>
-            <Juego
-              image={info.image}
-              gameTitle={info.gameTitle}
-              gameDescription={info.gameDescription}
-              gameLaunch={info.gameLaunch}
-              gameDeveloper={info.gameDeveloper}
-              gameMode={info.gameMode}
-              state={info.state}
-            />
-          </div>
-        );
-      })}
-
-      <Juego
-        image="Images/HK.jpg"
-        gameTitle="Hollow Knight"
-        gameDescription="¡Forja tu propio camino en Hollow Knight! Una aventura épica
+        <Juego
+          image="Images/HK.jpg"
+          gameTitle="Hollow Knight"
+          gameDescription="¡Forja tu propio camino en Hollow Knight! Una aventura épica
       a través de un vasto reino de insectos y héroes que se
       encuentra en ruinas."
-        gameLaunch="24 FEB 2017"
-        gameDeveloper="Team Cherry"
-        gameMode="Un jugador"
-      />
+          gameLaunch="24 FEB 2017"
+          gameDeveloper="Team Cherry"
+          gameMode="Un jugador"
+        />
+      </div>
     </div>
   );
 }
