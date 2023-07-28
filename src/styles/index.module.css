@@ -13,6 +13,7 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  justify-content: space-around;
 }
 
 #Titulo {
@@ -21,11 +22,6 @@
   color: aliceblue;
 }
 /*width: 100%; */
-
-.Gcard {
-  display: flex;
-  flex-wrap: wrap;
-}
 
 /* Establecer el ancho de cada componente en porcentaje */
 .Gcard > div {
