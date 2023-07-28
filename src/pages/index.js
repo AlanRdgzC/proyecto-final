@@ -8,7 +8,7 @@ export default function Home() {
   const [characterToUpdate, setCharacterToUpdate] = useState(null);
   const [showUpdateModal, setShowUpdateModal] = useState(false);
 
-  function getAllGames() {
+  function getAllGames() { 
     axios.get("http://localhost:5000/api/juegos/").then((response) => {
       console.log(response);
       setData(response.data);
@@ -25,7 +25,6 @@ export default function Home() {
       <header id={styles.Titulo}>
         <h1>Gaming Database</h1>
       </header>
-
       {data.map((info) => {
         return (
           <Juego
