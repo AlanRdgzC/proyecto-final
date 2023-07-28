@@ -8,7 +8,7 @@ export default function Home() {
   const [characterToUpdate, setCharacterToUpdate] = useState(null);
   const [showUpdateModal, setShowUpdateModal] = useState(false);
 
-  function getAllGames() { 
+  function getAllGames() {
     axios.get("http://localhost:5000/api/juegos/").then((response) => {
       console.log(response);
       setData(response.data);
@@ -25,7 +25,6 @@ export default function Home() {
       <header id={styles.Titulo}>
         <h1>Gaming Database</h1>
       </header>
-<<<<<<< HEAD
       <div className={styles.body}>
         {data.map((info) => {
           return (
@@ -48,28 +47,6 @@ export default function Home() {
           image="Images/HK.jpg"
           gameTitle="Hollow Knight"
           gameDescription="¡Forja tu propio camino en Hollow Knight! Una aventura épica
-=======
-      {data.map((info) => {
-        return (
-          <div className={styles.Gdcard}>
-            <Juego
-              image={info.image}
-              gameTitle={info.gameTitle}
-              gameDescription={info.gameDescription}
-              gameLaunch={info.gameLaunch}
-              gameDeveloper={info.gameDeveloper}
-              gameMode={info.gameMode}
-              state={info.state}
-            />
-          </div>
-        );
-      })}
-
-      <Juego
-        image="Images/HK.jpg"
-        gameTitle="Hollow Knight"
-        gameDescription="¡Forja tu propio camino en Hollow Knight! Una aventura épica
->>>>>>> ef89b269d3c1560279194ca3ccb4dea52b7d3daf
       a través de un vasto reino de insectos y héroes que se
       encuentra en ruinas."
           gameLaunch="24 FEB 2017"
