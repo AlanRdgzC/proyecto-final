@@ -4,8 +4,11 @@
       rgba(41, 41, 1, 0.5)
     ),
     url("../../public/Images/juego.jpg");
-  width: 100%;
-  height: 800px;
+
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #Titulo {
@@ -13,3 +16,4 @@
   justify-content: center;
   color: aliceblue;
 }
+/*width: 100%; */
