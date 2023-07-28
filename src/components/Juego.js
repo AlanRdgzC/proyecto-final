@@ -15,19 +15,19 @@ function Juego(props) {
     >
       <Card.Img variant="top" src={props.image} />
       <Card.Body>
-        <Card.Title>{props.gametitle}</Card.Title>
-        <Card.Text>{props.gamedescription}</Card.Text>
+        <Card.Title>{props.gameTitle}</Card.Title>
+        <Card.Text>{props.gameDescription}</Card.Text>
       </Card.Body>
       <ListGroup>
         <ListGroup.Item variant="dark">
-          FECHA DE LANZAMIENTO:<br></br> {props.gamelaunch}
+          FECHA DE LANZAMIENTO:<br></br> {props.gameLaunch}
         </ListGroup.Item>
 
         <ListGroup.Item variant="dark">
-          DESARROLLADOR:<br></br> {props.gamedeveloper}
+          DESARROLLADOR:<br></br> {props.gameDeveloper}
         </ListGroup.Item>
 
-        <ListGroup.Item variant="dark">{props.gamemode}</ListGroup.Item>
+        <ListGroup.Item variant="dark">{props.gameMode}</ListGroup.Item>
       </ListGroup>
 
       <DropdownButton id="boton-principal" title="Enviar a" variant="success">
