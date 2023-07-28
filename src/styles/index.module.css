@@ -29,6 +29,6 @@
 
 /* Establecer el ancho de cada componente en porcentaje */
 .Gcard > div {
-  flex-basis: 25%; /* Aquí puedes ajustar el porcentaje según tus necesidades */
+  flex-basis: 29%; /* Aquí puedes ajustar el porcentaje según tus necesidades */
   padding: 5px; /* Agrega un poco de espaciado entre los componentes */
 }
