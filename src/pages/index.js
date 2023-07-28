@@ -27,15 +27,17 @@ export default function Home() {
       </header>
       {data.map((info) => {
         return (
-          <Juego
-            image={info.image}
-            gameTitle={info.gameTitle}
-            gameDescription={info.gameDescription}
-            gameLaunch={info.gameLaunch}
-            gameDeveloper={info.gameDeveloper}
-            gameMode={info.gameMode}
-            state={info.state}
-          />
+          <div className={styles.Gdcard}>
+            <Juego
+              image={info.image}
+              gameTitle={info.gameTitle}
+              gameDescription={info.gameDescription}
+              gameLaunch={info.gameLaunch}
+              gameDeveloper={info.gameDeveloper}
+              gameMode={info.gameMode}
+              state={info.state}
+            />
+          </div>
         );
       })}
 
