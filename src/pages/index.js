@@ -38,6 +38,7 @@ export default function Home() {
                 gameDeveloper={info.gameDeveloper}
                 gameMode={info.gameMode}
                 state={info.state}
+                id = {info._id}
               />
             </div>
           );

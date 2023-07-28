@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
+import axios from "axios";
 
 // Función para verificar si una URL es un enlace de imagen válido
 function isImageUrl(url) {
@@ -14,6 +15,42 @@ function isImageUrl(url) {
 function Juego(props) {
   const imageUrl = props.image;
   const showImage = isImageUrl(imageUrl);
+  const [gameTitle, setGametitle] = useState("");
+  const [gameDescription, setGamedescription] = useState("");
+  const [gameLaunch, setGamelaunch] = useState("");
+  const [gameDeveloper, setGamedeveloper] = useState("");
+  const [gameMode, setGamemode] = useState("");
+  const [image, setImage] = useState("");
+  const [state, setState] = useState("Any");
+
+  function UpdateGame(id,newState){
+ /*   props.state;
+    let newGame = {
+      routeName: gameTitle.split(" ").join("").toLowerCase(),
+      gameTitle: gameTitle,
+      gameDescription: gameDescription,
+      gameLaunch: gameLaunch,
+      gameDeveloper: gameDeveloper,
+      gameMode: gameMode,
+      image: image,
+      state: state,
+    };*/
+
+    let cambios = {
+      id : id,
+      state: newState
+    }
+
+    //alert(cambios.id)
+    axios
+      .put("http://localhost:5000/api/actualizarEstado", cambios)
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
 
   return (
     <div className="Gcard">
@@ -43,16 +80,16 @@ function Juego(props) {
         </ListGroup>
 
         <DropdownButton id="boton-principal" title="Enviar a" variant="success">
-          <Dropdown.Item href="/jugando" onClick={props.state}>
+          <Dropdown.Item href="/jugando" onClick={() => UpdateGame(props.id,"jugando")}>
             Jugando
           </Dropdown.Item>
-          <Dropdown.Item href="/pendientes" onClick={props.state}>
+          <Dropdown.Item href="/pendientes" onClick={() => UpdateGame(props.id,"pendientes")}>
             Pendiente
           </Dropdown.Item>
-          <Dropdown.Item href="/terminados" onClick={props.state}>
+          <Dropdown.Item href="/terminados" onClick={() => UpdateGame(props.id,"terminados")}>
             Terminado
           </Dropdown.Item>
-          <Dropdown.Item href="/abandonados" onClick={props.state}>
+          <Dropdown.Item href="/abandonados" onClick={() => UpdateGame(props.id,"abandonados")}>
             Abandonado
           </Dropdown.Item>
         </DropdownButton>

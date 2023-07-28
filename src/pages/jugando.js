@@ -1,22 +1,50 @@
-import React from "react";
-import styles from "../styles/jugando.module.css";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Juegopeque from "@/components/Juegopeque";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import Juego from "../components/Juego";
+import styles from "../styles/index.module.css";
+
 
 function jugando() {
+  const [data, setData] = useState([]);
+  const [characterToUpdate, setCharacterToUpdate] = useState(null);
+  const [showUpdateModal, setShowUpdateModal] = useState(false);
+
+  function getAllGames() {
+    axios.get("http://localhost:5000/api/juegos/").then((response) => {
+      params{
+        state: jugando;
+        alert(response);
+        setData(response.data);
+      }
+    });
+  }
+
+  useEffect(() => {
+    getAllGames();
+  }, []);
   return (
     <div id={styles.Fondo}>
       <header id={styles.Titulo}>
         <h1>Jugando</h1>
       </header>
 
-      <Juegopeque
-        gametitle="Hollow Knight"
-        color="success"
-        image="Images/HK.jpg"
-      />
+      {data.map((info) => {
+          return (
+            <div className={styles.Gdcard}>
+              <Juego
+                classname={styles.cards}
+                image={info.image}
+                gameTitle={info.gameTitle}
+                gameDescription={info.gameDescription}
+                gameLaunch={info.gameLaunch}
+                gameDeveloper={info.gameDeveloper}
+                gameMode={info.gameMode}
+                state={info.state}
+                id = {info._id}
+              />
+            </div>
+          );
+        })}
     </div>
   );
 }
