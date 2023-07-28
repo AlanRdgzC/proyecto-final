@@ -11,63 +11,12 @@ function pendientes() {
       <header id={styles.Titulo}>
         <h1>Pendientes</h1>
       </header>
-      <Container>
-        <Row>
-          <Col>
-            <Juegopeque
-              gametitle="Hollow Knight"
-              color="warning"
-              image="Images/HK.jpg"
-            />
-          </Col>
-          <Col>
-            <Juegopeque gametitle="ej" color="warning" image="Images/HK.jpg" />
-          </Col>
-          <Col>
-            <Juegopeque gametitle="ej" color="warning" image="Images/HK.jpg" />
-          </Col>
-          <Col>
-            <Juegopeque gametitle="ej" color="warning" image="Images/HK.jpg" />
-          </Col>
-          <Col>
-            <Juegopeque gametitle="ej" color="warning" image="Images/HK.jpg" />
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <Juegopeque gametitle="eje" color="warning" image="Images/HK.jpg" />
-          </Col>
-          <Col>
-            <Juegopeque gametitle="ej" color="warning" image="Images/HK.jpg" />
-          </Col>
-          <Col>
-            <Juegopeque gametitle="ej" color="warning" image="Images/HK.jpg" />
-          </Col>
-          <Col>
-            <Juegopeque gametitle="ej" color="warning" image="Images/HK.jpg" />
-          </Col>
-          <Col>
-            <Juegopeque gametitle="ej" color="warning" image="Images/HK.jpg" />
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <Juegopeque gametitle="eje" color="warning" image="Images/HK.jpg" />
-          </Col>
-          <Col>
-            <Juegopeque gametitle="ej" color="warning" image="Images/HK.jpg" />
-          </Col>
-          <Col>
-            <Juegopeque gametitle="ej" color="warning" image="Images/HK.jpg" />
-          </Col>
-          <Col>
-            <Juegopeque gametitle="ej" color="warning" image="Images/HK.jpg" />
-          </Col>
-          <Col>
-            <Juegopeque gametitle="ej" color="warning" image="Images/HK.jpg" />
-          </Col>
-        </Row>
-      </Container>
+
+      <Juegopeque
+        gametitle="Hollow Knight"
+        color="warning"
+        image="Images/HK.jpg"
+      />
     </div>
   );
 }

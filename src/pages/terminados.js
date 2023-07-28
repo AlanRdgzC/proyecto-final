@@ -11,63 +11,12 @@ function terminados() {
       <header id={styles.Titulo}>
         <h1>Terminados</h1>
       </header>
-      <Container>
-        <Row>
-          <Col>
-            <Juegopeque
-              gametitle="Hollow Knight"
-              color="info"
-              image="Images/HK.jpg"
-            />
-          </Col>
-          <Col>
-            <Juegopeque gametitle="ej" color="info" image="Images/HK.jpg" />
-          </Col>
-          <Col>
-            <Juegopeque gametitle="ej" color="info" image="Images/HK.jpg" />
-          </Col>
-          <Col>
-            <Juegopeque gametitle="ej" color="info" image="Images/HK.jpg" />
-          </Col>
-          <Col>
-            <Juegopeque gametitle="ej" color="info" image="Images/HK.jpg" />
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <Juegopeque gametitle="eje" color="info" image="Images/HK.jpg" />
-          </Col>
-          <Col>
-            <Juegopeque gametitle="ej" color="info" image="Images/HK.jpg" />
-          </Col>
-          <Col>
-            <Juegopeque gametitle="ej" color="info" image="Images/HK.jpg" />
-          </Col>
-          <Col>
-            <Juegopeque gametitle="ej" color="info" image="Images/HK.jpg" />
-          </Col>
-          <Col>
-            <Juegopeque gametitle="ej" color="info" image="Images/HK.jpg" />
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <Juegopeque gametitle="eje" color="info" image="Images/HK.jpg" />
-          </Col>
-          <Col>
-            <Juegopeque gametitle="ej" color="info" image="Images/HK.jpg" />
-          </Col>
-          <Col>
-            <Juegopeque gametitle="ej" color="info" image="Images/HK.jpg" />
-          </Col>
-          <Col>
-            <Juegopeque gametitle="ej" color="info" image="Images/HK.jpg" />
-          </Col>
-          <Col>
-            <Juegopeque gametitle="ej" color="info" image="Images/HK.jpg" />
-          </Col>
-        </Row>
-      </Container>
+
+      <Juegopeque
+        gametitle="Hollow Knight"
+        color="info"
+        image="Images/HK.jpg"
+      />
     </div>
   );
 }
