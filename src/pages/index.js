@@ -25,6 +25,7 @@ export default function Home() {
       <header id={styles.Titulo}>
         <h1>Gaming Database</h1>
       </header>
+
       {data.map((info) => {
         return (
           <Juego

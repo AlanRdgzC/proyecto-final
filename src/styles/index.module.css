@@ -17,3 +17,14 @@
   color: aliceblue;
 }
 /*width: 100%; */
+
+.Gcard {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Establecer el ancho de cada componente en porcentaje */
+.Gcard > div {
+  flex-basis: 25%; /* Aquí puedes ajustar el porcentaje según tus necesidades */
+  padding: 5px; /* Agrega un poco de espaciado entre los componentes */
+}
