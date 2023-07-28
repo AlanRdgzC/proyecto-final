@@ -5,13 +5,14 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import styles from "../styles/admin.module.css";
+import axios from "axios";
 
 function admin() {
-  const [gametitle, setGametitle] = useState("");
-  const [gamedescription, setGamedescription] = useState("");
-  const [gamelaunch, setGamelaunch] = useState("");
-  const [gamedeveloper, setGamedeveloper] = useState("");
-  const [gamemode, setGamemode] = useState("");
+  const [gameTitle, setGametitle] = useState("");
+  const [gameDescription, setGamedescription] = useState("");
+  const [gameLaunch, setGamelaunch] = useState("");
+  const [gameDeveloper, setGamedeveloper] = useState("");
+  const [gameMode, setGamemode] = useState("");
   const [image, setImage] = useState("");
   const [state, setState] = useState("Any");
 
@@ -39,17 +40,18 @@ function admin() {
 
   function addGame() {
     let newGame = {
-      gametitle: gametitle,
-      gamedescription: gamedescription,
-      gamelaunch: gamelaunch,
-      gamedeveloper: gamedeveloper,
-      gamemode: gamemode,
+      routeName: gameTitle.split(" ").join("").toLowerCase(),
+      gameTitle: gameTitle,
+      gameDescription: gameDescription,
+      gameLaunch: gameLaunch,
+      gameDeveloper: gameDeveloper,
+      gameMode: gameMode,
       image: image,
       state: state,
     };
 
     axios
-      .post("http://localhost:5000", newGame)
+      .post("http://localhost:5000/api/juegos", newGame)
       .then((response) => {
         console.log(response);
       })
@@ -71,7 +73,7 @@ function admin() {
                 <Form.Label>Game Name</Form.Label>
                 <Form.Control
                   placeholder="Nombre del juego"
-                  value={gametitle}
+                  value={gameTitle}
                   onChange={nameChange}
                 />
               </Form.Group>
@@ -85,7 +87,7 @@ function admin() {
                   as="textarea"
                   rows={3}
                   placeholder="Descripcion del juego"
-                  value={gamedescription}
+                  value={gameDescription}
                   onChange={descriptionChange}
                 />
               </Form.Group>
@@ -94,7 +96,7 @@ function admin() {
                 <Form.Label>Release Date</Form.Label>
                 <Form.Control
                   placeholder="Fecha de lanzamiento"
-                  value={gamelaunch}
+                  value={gameLaunch}
                   onChange={launchChange}
                 />
               </Form.Group>
@@ -103,7 +105,7 @@ function admin() {
                 <Form.Label>GameDev</Form.Label>
                 <Form.Control
                   placeholder="Desarrolladora del juego"
-                  value={gamedeveloper}
+                  value={gameDeveloper}
                   onChange={devChange}
                 />
               </Form.Group>
@@ -112,7 +114,7 @@ function admin() {
                 <Form.Label>Players</Form.Label>
                 <Form.Control
                   placeholder="Cantidad de jugadores"
-                  value={gamemode}
+                  value={gameMode}
                   onChange={modeChange}
                 />
               </Form.Group>
